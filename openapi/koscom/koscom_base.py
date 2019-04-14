@@ -34,8 +34,7 @@ class Koscom:
         process_name = "bookkeeper"
         try:
             if (issue_code is None):
-                return { }
-            #token = "764a1e44-f44e-907d-78ab-f8ca9e7c28cb"
+            
             url = "/v1/bookkeeper/fs/ifrs/" + issue_code + "?from=" + DateFrom + "&to=" + DateTo
             #url = "/v1/bookkeeper/fs/ifrs/005930?from=20160101&to=20160630"
 
@@ -62,10 +61,8 @@ class Koscom:
         try:
             if (issue_code is None):
                 return { }
-            #token = "764a1e44-f44e-907d-78ab-f8ca9e7c28cb"
             url =  "/v2/market/stocks/kospi/" + issue_code + "/orderbook"
 
-            #https://sandbox-apigw.koscom.co.kr/v2/market/stocks/kospi/005930/orderbook
             body_response = Koscom.make_call_binary(url, "GET")
             return { process_name : body_response }
         except Exception as e:
@@ -94,7 +91,7 @@ class Koscom:
         try:
             if (issue_code is None):
                 return { }
-            #token = "764a1e44-f44e-907d-78ab-f8ca9e7c28cb"
+
             url =  "/v2/market/stocks/kospi/" + issue_code + "/history?trnsmCycleTpCd=" + trnsmCycleTpCd + "&inqStrtDd=" + inqStrtDd+ "&inqEndDd=" + inqEndDd +"&reqCnt=" + reqCnt
             #https://sandbox-apigw.koscom.co.kr/v2/market/stocks/kospi/005930/history?trnsmCycleTpCd=D&inqStrtDd=20150101&inqEndDd=20150131&reqCnt=20
             body_response = Koscom.make_call_binary(url, "GET")
@@ -108,7 +105,7 @@ class Koscom:
         try:
             if (issue_code is None):
                 return { }
-            #token = "764a1e44-f44e-907d-78ab-f8ca9e7c28cb"
+
             url =  "/v2/market/stocks/kospi/" + issue_code + "/price"
 
             body_response = Koscom.make_call_binary(url, "GET")

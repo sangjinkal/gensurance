@@ -4,15 +4,13 @@ import logging
 from flask import Flask, request, render_template, jsonify, Markup, abort, make_response, Response
 
 #from flask_restful import Resource, Api, reqparse
-from .response import koscom_response
+from .response import koscom_resonse
 #from slackclient import SlackClient
 
 
 #api = Api(app)
 # Your app's Slack bot user token
-SLACK_BOT_TOKEN = 'xoxb-85954337637-367075388229-UX1fBNie8uSzTR7F1NzaDAZw'
-SLACK_VERIFICATION_TOKEN = 'xxoxp-85954337637-85948092656-366936922818-87e4c4d2ca0bcf6f8664d129e79094f4'
-SLACK_API_TOKEN = 'xoxp-85954337637-85948092656-366323959264-5a8636c2ed6dd2a71dbc14d70ea59d18'
+
 
 user_id = "C2HUDAP5Y"
 #parser = reqparse.RequestParser()

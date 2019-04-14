@@ -43,13 +43,6 @@ try:
         List_temp = [market_code, issue_code, trdDd, trdPrc,opnprc,hgprc,lwprc,accTrdvol, accTrdval, cmpprevddPrc]
         List.append(List_temp)
 
-        # Commented Temporary to prevent storing data to database
-        # cmd = "insert into gensurance.tb_stock_history (id,marketcode, issuecode,trdDd, trdPrc, opnprc, hgprc, lwprc,accTrdvol,accTrdval, cmpprevddPrc) "
-        # cmd = cmd + " values ( '{id}','{market_code}','{issue_code}','{trdDd}', '{trdPrc}', {opnprc}, {hgprc}, {lwprc},{accTrdvol},{accTrdval}, {cmpprevddPrc} )"
-        # sql = cmd.format(id=maxID,market_code=market_code, issue_code=issue_code,trdDd=trdDd, trdPrc=trdPrc, opnprc=opnprc, hgprc=hgprc, lwprc=lwprc,accTrdvol=accTrdvol,accTrdval=accTrdval, cmpprevddPrc=cmpprevddPrc)
-        # print(sql)
-        # c.execute(sql)
-        # conn.commit()
     headers = List.pop(0)
 
     df = pd.DataFrame(List, columns=headers)

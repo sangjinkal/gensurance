@@ -6,4 +6,4 @@ def hello_world():
  return 'See you in TeroKarvinen.com!\n\n'
 
 if __name__ == '__main__':
- app.run(host='133.130.126.195', port=5000)
+ app.run(host=localhost, port=5000)
